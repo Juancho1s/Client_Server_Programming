@@ -1,0 +1,16 @@
+<h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+
+<h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam alias corrupti dolor aperiam maiores obcaecati placeat, impedit inventore vero architecto quam veritatis repellat, atque voluptates blanditiis repudiandae dolore enim.
+</h2>
+
+<ul>
+    <% @articles.each do |i| %>
+    <li>
+        <a href="/articles/<%= i.id%>">
+            <%= i.title %>
+        </a>
+    </li>
+    <% end %>
+</ul>
