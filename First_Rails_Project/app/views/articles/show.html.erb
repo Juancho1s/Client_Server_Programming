@@ -1,0 +1,38 @@
+<style>
+    .par{
+        font-size: 20px;
+    }
+</style>
+
+
+<div class="card shadow">
+    <div class="card-header">
+        <h1>
+        <%= @article.title %>
+        </h1>
+    </div>
+    <div class="card-body">
+        <p class='par'>
+            <%= @article.body%>
+        </p>
+    </div>
+    <div class="card-footer">
+        <ul class="list-unstyled d-flex flex-row justify-content-center gap-3">
+            <li>
+                <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-primary" %>
+            </li>
+
+            <li>
+                <%= link_to 'Back to articles set', articles_path, class: "btn btn-outline-primary" %>
+            </li>
+
+            <li>
+                <%= link_to 'Destroy', article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure to delete this record?"
+                }, class: "btn btn-outline-danger" %>
+            </li>
+        </ul>
+    </div>
+</div>
+

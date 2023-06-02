@@ -1,0 +1,22 @@
+
+<div class="container p-5 gap-3">
+    <div class="container-header text-center">
+        <h1 class='container-title pt-6 pb-2'>Wlcome to the set of Articles</h1>
+        <h3 class="container-subtitle fw-m">Here you are all the articles already abailable</h3>
+    </div>
+
+    <div class="container-body">
+        <ul class="list-unstyled d-flex flex-column gap-3">
+            <%@articles.each do |article|%>
+            <li class="btn btn-outline-secondary">
+                <a class='dropdown-item text-center fs-5' href="/articles/<%= article.id %>"><%= article.title %></a>
+            </li>
+            <%end%>
+        </ul>
+    </div>
+
+    <div class="container-footer d-flex justify-content-center">
+        <a class="btn btn-outline-primary" href="http://localhost:3000/articles/new">Create a new article</a>
+    </div>
+</div>
+
