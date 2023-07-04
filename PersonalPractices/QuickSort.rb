@@ -44,7 +44,7 @@ end
 array = []
 
 for i in 0..19
-  array.push(rand(100))
+  array.push(rand(1000))
 end
 
 quicksort(array)

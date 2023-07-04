@@ -1,0 +1,150 @@
+<div class="row" style="flex: auto;">
+  <div class="col-md-12">
+
+    <div class="row featured-boxes login">
+      <div class="col-sm-6" style="float: none; margin: 0 auto;">
+        <div class="featured-box featured-box-secundary default info-content">
+          <div class="box-content">
+            <h4>Add new project</h4>
+            <form action="/addProject/{{user_id}}/{{#if project_id}}{{project_id}}{{/if}}" method="post">
+              
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Title</label>
+                    <input
+                      name="title"
+                      type="text"
+                      value="{{#if project}}{{project.title}}{{/if}}"
+                      class="form-control input-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+
+                  <div class="col-md-12">
+                    <label>Type</label>
+                    <br /><br />
+                    <label>Website</label>
+                    <input
+                      name="type"
+                      type="radio"
+                      value="Website"
+                      class="form-control input-md"
+                      max="100"
+                    />
+
+                    <label>Brand</label>
+                    <input
+                      name="type"
+                      type="radio"
+                      value="Brand"
+                      class="form-control input-md"
+                    />
+
+                    <label>Logo</label>
+                    <input
+                      name="type"
+                      type="radio"
+                      value="Logo"
+                      class="form-control input-input-md"
+                    />
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Description</label>
+                    <input
+                      name="description"
+                      type="text"
+                      value="{{#if project}}{{project.description}}{{/if}}"
+                      class="form-control input-lg"
+                      max="500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Cover link</label>
+                    <input
+                      name="cover"
+                      type="text"
+                      value="{{#if project}}{{project.cover}}{{/if}}"
+                      class="form-control input-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row skills_adition">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Skills</label>
+                    <input
+                      name="technologies"
+                      type="text"
+                      value="{{#if project}}{{project.technologies}}{{/if}}"
+                      class="form-control input-lg"
+                      max="20"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Client</label>
+                    <input
+                      name="client"
+                      type="text"
+                      value="{{#if project}}{{project.client}}{{/if}}"
+                      class="form-control input-lg"
+                      max="200"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label>Date</label>
+                    <input
+                      name="date"
+                      type="date"
+                      value="{{#if project}}{{project.date}}{{/if}}"
+                      class="form-control input-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <input
+                    type="submit"
+                    value="Register"
+                    class="btn btn-primary pull-right push-bottom"
+                    data-loading-text="Loading..."
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.UploadNewPorject{
+    display: flex; 
+    justify-content: end;
+    align-items:center;
+    width: inherit;
+}
+
+.UploadButton{
+    padding: 2%;
+    fill: goldenrod;
+}
